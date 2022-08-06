@@ -29,7 +29,7 @@ public class Algorithms {
 
         public void linearSearch (Integer value){
 
-            String indexes = "";
+            StringBuilder indexes = new StringBuilder();
 
             boolean valueFound = false;
 
@@ -37,13 +37,14 @@ public class Algorithms {
 
                 if(value == theArray[i]) {
 
-                    System.out.println("The value was found in the following: ");
-
                     valueFound = true;
 
-                    System.out.println(indexes += i + " ");
+                   indexes.append(i).append(" ");
                 }
+
             }
+            System.out.println( "The value was found in the following indexes: " + indexes);
+
             if (!valueFound) {
 
                 System.out.println("None");
@@ -51,6 +52,50 @@ public class Algorithms {
         }
 
 
+        public void binarySearch(int value){
+
+            int low = 0;
+            int high = arraySize - 1;
+
+            while(low <= high){
+
+                int middle = (high + low)/2 ;
+
+                if(theArray[middle] < value) low = middle + 1;
+                else if(theArray[middle] > value) high = middle -1;
+                else {
+
+                    System.out.println("Found a match at index: " + middle + " ");
+
+                    low = high + 1;
+                }
+            }
+
+        }
+
+        public void bubbleSort(){
+
+             for(int i = arraySize -1; i > 0; i--){
+
+                 for (int j = 0 ; j < i; j++ ){
+
+                     if(theArray[j] > theArray[j+1]){
+
+                         swapValues(j,j+1);
+                     }
+                 }
+             }
+        }
+
+    private void swapValues(int firstIndex, int secondIndex) {
+
+           int temp = theArray[firstIndex];
+           theArray[firstIndex] = theArray[secondIndex];
+           theArray[secondIndex] = temp;
+
+
+
+    }
 
 
     public static void main(String[] args) {
@@ -59,6 +104,10 @@ public class Algorithms {
 
         newArray.generateRandomArray();
         newArray.printArray();
-        newArray.linearSearch(12);
+        newArray.bubbleSort();
+        System.out.println();
+        newArray.printArray();
+        newArray.binarySearch(12);
+
     }
 }
