@@ -97,6 +97,44 @@ public class Algorithms {
 
     }
 
+    public void selectionSort(){
+
+            for(int m = 0; m < arraySize; m++){
+
+                int min = m;
+
+                for(int j = m; j < arraySize; j++){
+
+                    if (theArray[min] > theArray[j]){
+
+                        min = j;
+                    }
+                }
+                swapValues(m, min);
+            }
+    }
+
+    public void insertionSort(){
+
+            for(int i = 1; i < arraySize; i++){
+
+                int j = i;
+
+                int insert = theArray[i];
+
+                while((j > 0) && theArray[j-1] > insert){
+
+                    theArray[j] = theArray[j -1];
+
+                    j--;
+                }
+
+                theArray[j] = insert;
+            }
+
+
+    }
+
 
     public static void main(String[] args) {
 
@@ -104,10 +142,12 @@ public class Algorithms {
 
         newArray.generateRandomArray();
         newArray.printArray();
-        newArray.bubbleSort();
+//        newArray.bubbleSort();
+        newArray.insertionSort();
         System.out.println();
         newArray.printArray();
-        newArray.binarySearch(12);
+//        newArray.binarySearch(12);
+//        newArray.insertionSort();
 
     }
 }
