@@ -132,6 +132,24 @@ public class Algorithms {
                 theArray[j] = insert;
             }
 
+    }
+
+
+    public void insertionSort2(){
+
+            for(int i = 1; i < arraySize; i++){
+
+                int j = i;
+
+                int key = theArray[i];
+
+                while((j > 0) && theArray[j-1] > key){
+
+                    swapValues(j, j-1);
+
+                    j--;
+                }
+            }
 
     }
 
@@ -143,7 +161,7 @@ public class Algorithms {
         newArray.generateRandomArray();
         newArray.printArray();
 //        newArray.bubbleSort();
-        newArray.insertionSort();
+        newArray.insertionSort2();
         System.out.println();
         newArray.printArray();
 //        newArray.binarySearch(12);
