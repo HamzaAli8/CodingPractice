@@ -22,6 +22,37 @@ public class Main {
         }
     }
 
+    public static boolean isPalindrome(int x) {
+
+        int reversedNum = 0;
+
+        int remainder;
+
+        // store the number to originalNum
+        int originalNum = x;
+
+
+        // get the reverse of originalNum
+        // store it in variable
+        while (x > 0) {
+            remainder = x % 10;
+            reversedNum = reversedNum * 10 + remainder;
+            x /= 10;
+        }
+
+        // check if reversedNum and originalNum are equal
+        if (originalNum == reversedNum) {
+
+            System.out.println(originalNum + " is Palindrome.");
+            return true;
+
+        }
+        else {
+            System.out.println(originalNum + " is not Palindrome.");
+            return false;
+        }
+    }
+
 
     public static boolean isAnagram2(String str1, String str2){
 
@@ -50,6 +81,12 @@ public class Main {
 
         return  str1Map.equals(str2Map);
 
+    }
+
+
+    public static boolean areTheyEqual(int x , int y){
+
+        return x == y;
     }
 
 
@@ -85,6 +122,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+//        isPalindrome(121);
+//        isPalindrome(2442);
+
+
+
 //        Scanner sc = new Scanner(System.in);
 //
 //        System.out.println("please enter string 1:");
@@ -99,7 +141,43 @@ public class Main {
 
 //        System.out.println(isAnagram2(str1, str2));
 
-        getKeys();
+//        getKeys();
+
+//        Stack nums = new Stack();
+//
+//        nums.push(15);
+//        nums.push(8);
+//        nums.push(10);
+//
+//        nums.pop();
+//
+//        nums.show();
+
+
+//        List<String> names = new ArrayList<>();
+//
+//        names.add("Hamza");
+//        names.add("Hamza1");
+//        names.add("Hamza2");
+//        names.add("Hamza3");
+//        names.add("Hamza4");
+//
+//
+//
+//        System.out.println(names);
+//
+//
+//        names.remove(2);
+//
+//
+//        System.out.println(names);
+//        System.out.println(areTheyEqual(121,121));
+
+        isPalindrome(121);
+
+
+
+
 
 
     }
