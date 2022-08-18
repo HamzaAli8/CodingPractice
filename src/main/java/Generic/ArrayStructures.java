@@ -1,4 +1,8 @@
+package Generic;
+
 public class ArrayStructures {
+
+    int i = 0;
 
     private int [] theArray = new int[25];
 

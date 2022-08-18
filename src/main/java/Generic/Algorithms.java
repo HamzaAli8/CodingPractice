@@ -1,3 +1,5 @@
+package Generic;
+
 public class Algorithms {
 
         private int[] theArray = new int[25];

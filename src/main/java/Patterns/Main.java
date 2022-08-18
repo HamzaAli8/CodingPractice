@@ -1,57 +1,16 @@
-import java.util.*;
+package Patterns;
+
+import Generic.ArrayStructures;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class Main {
 
 
-    public static boolean isAnagram(String s, String t ){
-
-        if (s.length() != t.length()){
-
-            return false;
-        }
-
-        else{
-
-            char [] str1Array = s.toCharArray();
-            char [] str2Array = t.toCharArray();
-
-            Arrays.sort(str1Array);
-            Arrays.sort(str2Array);
-
-            return Arrays.equals(str1Array, str2Array);
-        }
-    }
-
-    public static boolean isPalindrome(int x) {
-
-        int reversedNum = 0;
-
-        int remainder;
-
-        // store the number to originalNum
-        int originalNum = x;
-
-
-        // get the reverse of originalNum
-        // store it in variable
-        while (x > 0) {
-            remainder = x % 10;
-            reversedNum = reversedNum * 10 + remainder;
-            x /= 10;
-        }
-
-        // check if reversedNum and originalNum are equal
-        if (originalNum == reversedNum) {
-
-            System.out.println(originalNum + " is Palindrome.");
-            return true;
-
-        }
-        else {
-            System.out.println(originalNum + " is not Palindrome.");
-            return false;
-        }
-    }
+  
 
 
     public static boolean isAnagram2(String str1, String str2){
@@ -143,7 +102,7 @@ public class Main {
 
 //        getKeys();
 
-//        Stack nums = new Stack();
+//        Generic.Stack nums = new Generic.Stack();
 //
 //        nums.push(15);
 //        nums.push(8);
@@ -174,6 +133,12 @@ public class Main {
 //        System.out.println(areTheyEqual(121,121));
 
         isPalindrome(121);
+
+        ArrayStructures t = new ArrayStructures();
+
+        t.i = 12;
+        t.i++;
+        System.out.println(t.i);
 
 
 
