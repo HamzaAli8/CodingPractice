@@ -1,5 +1,10 @@
 package Patterns;
 
+import java.lang.reflect.Array;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
 public class SlidingWindow {
 
 // brute force
@@ -43,5 +48,97 @@ public class SlidingWindow {
         return maxSum;
     }
 
+
+    public int findMinSubArray(int [] arr, int s){
+
+        int windowSum = 0, minLength = Integer.MAX_VALUE;
+        int windowStart = 0;
+        for(int windowEnd = 0; windowEnd < arr.length; windowEnd++){
+
+            windowSum += arr[windowEnd];
+
+            while(windowSum >= s){
+
+                minLength = Math.min(minLength, windowEnd - windowStart + 1);
+                windowSum -= arr[windowStart];
+                windowStart++;
+            }
+        }
+
+        return minLength;
+    }
+
+
+    public void StringToCharArray(String hello){
+
+        char [] arr =  hello.toCharArray();
+
+        HashMap<Character, Integer> characterIntegerHashMap = new HashMap<>();
+
+        for(char c : arr){
+
+            characterIntegerHashMap.put(c,characterIntegerHashMap.getOrDefault(c,0) + 1);
+            int i = characterIntegerHashMap.size();
+        }
+
+        System.out.println(characterIntegerHashMap);
+
+    }
+
+    public int FindLongestSubstringDistinctChar(String str, int k){
+
+        if(str == null || str.length() == 0 || str.length() < k){
+
+            throw new IllegalArgumentException();
+        }
+
+        int start = 0, maxLength = 0;
+
+        HashMap<Character, Integer> charFrequencyMap = new HashMap<>();
+
+        for(int end = 0; end < str.length(); end++){
+
+            char rightChar = str.charAt(end);
+            charFrequencyMap.put(rightChar,charFrequencyMap.getOrDefault(rightChar,0) +1);
+
+            while(charFrequencyMap.size() > k){
+
+                char leftChar = str.charAt(start);
+                charFrequencyMap.put(leftChar, charFrequencyMap.get(leftChar) -1);
+                if(charFrequencyMap.get(leftChar) == 0){
+                    charFrequencyMap.remove(leftChar);
+                }
+                start++;
+            }
+            maxLength = Math.max(maxLength, end - start + 1);
+        }
+
+        return maxLength;
+    }
+
+        public int romanToInt(String s) {
+
+            // Approach 1 - Easiest O(n)
+            Map<Character,Integer> roman = new HashMap<Character,Integer>();
+            roman.put('I',1);
+            roman.put('V',5);
+            roman.put('X',10);
+            roman.put('L',50);
+            roman.put('C',100);
+            roman.put('D',500);
+            roman.put('M',1000);
+
+            int result = 0;
+            char[] input = s.toCharArray();
+            int len = input.length;
+            for(int i=len-1;i>=0;i--){
+                result += roman.get(input[i]);
+                if(i!=0 && roman.get(input[i-1]) < roman.get(input[i])){
+                    result -= roman.get(input[i-1]);
+                    i--;
+                }
+            }
+            return result;
+        }
 
 }

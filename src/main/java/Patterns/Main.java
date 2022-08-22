@@ -1,6 +1,8 @@
 package Patterns;
 
 
+import java.util.Stack;
+
 public class Main {
 
 
@@ -12,10 +14,14 @@ public class Main {
 
         int t = s.findMaxSubStringSum2(new int[]{2,3,4,1,5},2);
 
-        System.out.println(p);
+        int q = s.findMinSubArray(new int[]{2,1,5,2,3,2},5);
+
+        s.romanToInt("MCMXCIV");
+
 
     }
 
 }
+
 
 
