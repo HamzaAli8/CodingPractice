@@ -141,4 +141,28 @@ public class SlidingWindow {
             return result;
         }
 
+
+
+    public int findMaxSubStringSum3(int [] arr){
+
+        int sum,maxSum = 0;
+
+
+        for(int i = 0; i < arr.length -1; i++){
+
+            for(int j = 1;  j <= arr.length -1; j++){
+
+                sum = arr[j] - arr[i];
+
+                maxSum = Math.max(sum,maxSum);
+            }
+
+        }
+
+        return maxSum;
+    }
+
+
+    
+
 }
