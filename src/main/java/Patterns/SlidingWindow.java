@@ -143,26 +143,36 @@ public class SlidingWindow {
 
 
 
-    public int findMaxSubStringSum3(int [] arr){
+    public int findProfit(int [] prices){
 
-        int sum,maxSum = 0;
+        int buyIdx = 0;
+        int currIdx = 1;
+        int profit = 0;
 
+        while(currIdx != prices.length) {
 
-        for(int i = 0; i < arr.length -1; i++){
+            if(prices[currIdx] < prices[currIdx - 1]) {
 
-            for(int j = 1;  j <= arr.length -1; j++){
-
-                sum = arr[j] - arr[i];
-
-                maxSum = Math.max(sum,maxSum);
+                profit += prices[currIdx - 1] - prices[buyIdx];
+                buyIdx = currIdx;
             }
 
+            currIdx++;
         }
 
-        return maxSum;
+        profit += prices[currIdx - 1] - prices[buyIdx];
+        return profit;
     }
 
 
-    
-
+    public int maxProfit(int[] prices) {
+        int sum = 0;
+        int lsf = prices[0];
+        for(int i=0; i<prices.length; i++){
+            lsf = Math.min(prices[i], lsf);
+            sum = Math.max(sum, prices[i] - lsf);
+        }
+        return sum;
+    }
 }
+

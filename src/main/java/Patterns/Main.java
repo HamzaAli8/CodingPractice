@@ -1,10 +1,6 @@
 package Patterns;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
 
 public class Main {
 
@@ -15,7 +11,7 @@ public class Main {
 
         SlidingWindow s = new SlidingWindow();
 
-        int y = s.findMaxSubStringSum3(new int [] {7,1,5,3,6,4});
+        int y = s.maxProfit(new int [] {3,5,8,2,1,6});
 
         int p = s.findMaxSubStringSum(new int[]{2,1,5,1,3,2},3);
 
@@ -25,21 +21,21 @@ public class Main {
 
         s.romanToInt("MCMXCIV");
 
-        int[]  arr = {2,5,9,11};
+        int[]  arr = {1,2,3,4,6};
 
-//        int arr2 [] = j.pairWithTargetSum2(arr, 11);
+        int[] arr2 = j.pairWithTargetSum3(arr, 6);
 
 //        System.out.println(Arrays.toString(arr2));
 
-        System.out.println(y);
+//        System.out.println(y);
 
 
+        int nonDuplicates =  j.removeDuplicates(new int [] {1,1,3,4,5,6,6,6,6,7,7});
 
-
-
-
-
+        System.out.println(nonDuplicates);
     }
+
+
 
 }
 
