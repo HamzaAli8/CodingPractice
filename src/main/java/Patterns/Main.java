@@ -11,6 +11,8 @@ public class Main {
 
         SlidingWindow s = new SlidingWindow();
 
+        CyclicSort c = new CyclicSort();
+
         int y = s.maxProfit(new int [] {3,5,8,2,1,6});
 
         int p = s.findMaxSubStringSum(new int[]{2,1,5,1,3,2},3);
@@ -30,9 +32,17 @@ public class Main {
 //        System.out.println(y);
 
 
-        int nonDuplicates =  j.removeDuplicates(new int [] {1,1,3,4,5,6,6,6,6,7,7});
+//        int nonDuplicates =  j.removeDuplicates(new int [] {1,1,3,4,5,6,6,6,6,7,7});
 
-        System.out.println(nonDuplicates);
+        arr = new int[] {1,5,6,4,3,2};
+
+        c.cyclicSort1(arr);
+
+        for (int num : arr){
+
+            System.out.print(num + " ");
+        }
+
     }
 
 
