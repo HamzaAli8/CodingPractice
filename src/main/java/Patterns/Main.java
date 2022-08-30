@@ -50,9 +50,22 @@ public class Main {
 
 
 
-        List<Integer> missing = c.findAllMissingNumbers(new int[] {2,3,1,8,2,3,5,1});
+//        List<Integer> duplicates = c.findAllDuplicates(new int[] {2,4,6,8,2,3,5,1});
 
-        System.out.println(missing);
+        Integer duplicate = c.FindDuplicate(new int[] {2,4,6,8,2,3,5,1});
+
+//        List<Integer> duplicateAndMissing =
+//                c.findMissingAndDuplicate(new int[] {3,1,2,3,6,4});
+
+        List<Integer> missingSmallestNum =
+                c.findSmallestMissingPositiveNum(new int[] {-3,1,5,4,2});
+
+
+
+
+
+
+        System.out.println(missingSmallestNum);
 
 
     }

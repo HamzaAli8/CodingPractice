@@ -65,5 +65,84 @@ public class CyclicSort {
              return missingNumbers;
     }
 
+    public int FindDuplicate(int [] nums){
+        int i = 0;
+        while(i < nums.length){
+            if (nums[i] != i + 1){
+                if (nums[i] != nums[nums[i] -1])
+                    swap(nums,i, nums[i] - 1);
+                else
+                    return nums[i];
+            } else {
+                i++;
+            }
+        }
+        return -1;
+    }
+
+    public List<Integer> findAllDuplicates(int [] nums){
+
+        int i = 0;
+        while (i < nums.length){
+
+            if(nums[i] != nums[nums[i] - 1])
+                swap(nums, i, nums[i] - 1);
+            else
+                i++;
+        }
+
+        List<Integer> missingNumbers = new ArrayList<>();
+        for(i = 0; i < nums.length; i++)
+            if (nums[i] != i + 1)
+                missingNumbers.add(nums[i]);
+
+        return missingNumbers;
+    }
+
+    public List<Integer> findMissingAndDuplicate(int [] nums){
+
+        int i = 0;
+        while (i < nums.length){
+            if(nums[i] != nums[nums[i] - 1])
+                swap(nums, i, nums[i] - 1);
+            else
+                i++;
+        }
+
+        List<Integer> missingAndDuplicateNumbers = new ArrayList<>();
+        for(i = 0; i < nums.length; i++)
+            if (nums[i] != i + 1){
+
+                missingAndDuplicateNumbers.add(nums[i]);
+                missingAndDuplicateNumbers.add(i + 1);
+            }
+
+        return missingAndDuplicateNumbers;
+    }
+
+
+    public List<Integer> findSmallestMissingPositiveNum(int [] nums){
+
+        int i = 0;
+        while (i < nums.length){
+                if(nums[i] < 0){
+                    continue;
+                }
+                else if (nums[i] != nums[nums[i]])
+                    swap(nums, i, nums[i]);
+                else
+                    i++;
+        }
+
+        List<Integer> missingNumbers = new ArrayList<>();
+        for(i = 0; i < nums.length; i++)
+            if (nums[i] != i + 1)
+                missingNumbers.add(i + 1);
+
+        return missingNumbers;
+    }
+
+
+
 
 }
