@@ -1,6 +1,7 @@
 package Patterns;
 
 
+import java.util.List;
 
 public class Main {
 
@@ -43,11 +44,16 @@ public class Main {
 //            System.out.print(num + " ");
 //        }
 
-        arr = new int[] {0,5,3,1,2};
+//        arr = new int[] {0,5,3,1,2};
+//
+//        int v = c.findMissingNumber(arr);
 
-        int v = c.findMissingNumber(arr);
 
-        System.out.println(v);
+
+        List<Integer> missing = c.findAllMissingNumbers(new int[] {2,3,1,8,2,3,5,1});
+
+        System.out.println(missing);
+
 
     }
 

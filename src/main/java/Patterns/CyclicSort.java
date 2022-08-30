@@ -1,6 +1,8 @@
 package Patterns;
 
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class CyclicSort {
 
@@ -44,7 +46,24 @@ public class CyclicSort {
             return nums.length;
     }
 
-    
+    public List<Integer> findAllMissingNumbers(int [] nums){
+
+         int i = 0;
+         while (i < nums.length){
+
+             if(nums[i] != nums[nums[i] - 1])
+                 swap(nums, i, nums[i] - 1);
+             else
+                 i++;
+         }
+
+         List<Integer> missingNumbers = new ArrayList<>();
+         for(i = 0; i < nums.length; i++)
+             if (nums[i] != i + 1)
+                 missingNumbers.add(i + 1);
+
+             return missingNumbers;
+    }
 
 
 }
