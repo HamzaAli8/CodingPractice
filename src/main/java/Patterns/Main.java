@@ -34,14 +34,20 @@ public class Main {
 
 //        int nonDuplicates =  j.removeDuplicates(new int [] {1,1,3,4,5,6,6,6,6,7,7});
 
-        arr = new int[] {1,5,6,4,3,2};
+//        arr = new int[] {1,5,6,4,3,2};
+//
+//        c.cyclicSort1(arr);
+//
+//        for (int num : arr){
+//
+//            System.out.print(num + " ");
+//        }
 
-        c.cyclicSort1(arr);
+        arr = new int[] {0,5,3,1,2};
 
-        for (int num : arr){
+        int v = c.findMissingNumber(arr);
 
-            System.out.print(num + " ");
-        }
+        System.out.println(v);
 
     }
 
