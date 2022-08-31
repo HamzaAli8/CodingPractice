@@ -26,6 +26,34 @@ public class MyLinkedList {
         }
     }
 
+    public void insertAtStart (int data){
+
+        Node startNode = new Node();
+
+        startNode.data = data;
+        startNode.next = head;
+
+        head = startNode;
+    }
+
+
+    public void reverse(MyLinkedList list){
+
+        Node current = list.head;
+        Node previous = null;
+        Node next;
+
+
+        while (current != null){
+
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+            list.head = previous;
+        }
+    }
+
     public void show(){
 
         Node printNode = head;

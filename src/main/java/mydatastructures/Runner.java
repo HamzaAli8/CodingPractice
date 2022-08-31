@@ -10,6 +10,10 @@ public class Runner {
         linkedList.insert(5);
         linkedList.insert(6);
         linkedList.insert(7);
+        linkedList.insertAtStart(3);
+
+
+        linkedList.reverse(linkedList);
 
         linkedList.show();
     }
