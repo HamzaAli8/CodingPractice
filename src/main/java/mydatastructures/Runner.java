@@ -7,13 +7,17 @@ public class Runner {
 
         MyLinkedList linkedList = new MyLinkedList();
 
-        linkedList.insert(5);
         linkedList.insert(6);
-        linkedList.insert(7);
-        linkedList.insertAtStart(3);
+        linkedList.insert(5);
+        linkedList.insert(3);
+        linkedList.insertAtStart(7);
+
+        linkedList.show();
 
 
         linkedList.reverse(linkedList);
+
+        System.out.println();
 
         linkedList.show();
     }
