@@ -33,9 +33,25 @@ public class Runner {
 
         BinaryTreeLevelOrder btl = new BinaryTreeLevelOrder();
 
-        List<List<Integer>> result = btl.traverse(root);
+//        List<List<Integer>> result = btl.traverse(root);
+//
+//        System.out.println("Level Order Traversal: " + result );
 
-        System.out.println("Level Order Traversal: " + result );
+
+//        boolean t = btl.checkSubarraySum(new int[] {23,2,6,4,7}, 6);
+//
+//        System.out.println(t);
+//
+
+        LongestPalindrome l = new LongestPalindrome();
+
+        int q = l.longestPalindrome("abccccdd");
+
+        System.out.println(q);
+
+
+
+
 
 
 

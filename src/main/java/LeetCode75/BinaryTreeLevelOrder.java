@@ -33,5 +33,39 @@ public class BinaryTreeLevelOrder {
         }
         return result;
     }
+
+
+    public boolean checkSubarraySum(int[] nums, int k) {
+
+        int windowSum = 0;
+        int windowStart = 0;
+        int i = 0;
+
+        while (i < nums.length){
+
+            windowSum += nums[i];
+
+            if (windowSum == k) return true;
+
+            if (k < windowSum){
+
+                windowSum -= nums[windowStart];
+                i++;
+            }
+
+            else {
+
+                i++;
+                windowSum += nums[i];
+                if (windowSum == k) return true;
+            }
+
+
+        }
+
+        return false;
+
+    }
+
 }
 
