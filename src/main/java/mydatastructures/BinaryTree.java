@@ -3,19 +3,19 @@ package mydatastructures;
 public class BinaryTree {
 
 
-    private bNode createNewNode(int val) {
+    private TreeNode createNewNode(int val) {
 
-        bNode Node = new bNode();
+        TreeNode TreeNode = new TreeNode();
 
-        Node.data = val;
-        Node.left = null;
-        Node.right = null;
-        return Node;
+        TreeNode.data = val;
+        TreeNode.left = null;
+        TreeNode.right = null;
+        return TreeNode;
     }
 
 
 
-    public bNode insertNode (bNode node, int val){
+    public TreeNode insertNode (TreeNode node, int val){
 
         if (node == null){
             return createNewNode(val);
@@ -30,6 +30,18 @@ public class BinaryTree {
         }
 
         return node;
+    }
+
+    public TreeNode invertTreeNode(TreeNode root){
+
+        if (root == null)
+            return root;
+
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+
+        return root;
     }
 
 

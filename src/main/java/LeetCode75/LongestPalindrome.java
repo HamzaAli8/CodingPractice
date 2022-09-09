@@ -1,5 +1,8 @@
 package LeetCode75;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LongestPalindrome {
 
 
@@ -25,5 +28,22 @@ public class LongestPalindrome {
         return result;
     }
 
+    public int longestPalindrome2(String s){
+
+        Set<Character> set = new HashSet<>();
+
+        int len = 0;
+
+        for (char c : s.toCharArray()){
+
+            if(set.contains(c)){
+                len+= 2;
+                set.remove(c);
+            }
+            else
+                set.add(c);
+        }
+        return set.size() > 0 ? len + 1 : len;
+    }
 
 }

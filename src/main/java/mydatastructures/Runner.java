@@ -17,14 +17,15 @@ public class Runner {
 //        System.out.println();
 //        linkedList.show();
 
-        bNode root = null;
+        TreeNode root = null;
         BinaryTree Btree = new BinaryTree();
 
-        root = Btree.insertNode(root,8);
-        root = Btree.insertNode(root, 11);
-        root = Btree.insertNode(root, 9);
-        root = Btree.insertNode(root, 7);
-        root = Btree.insertNode(root, 17);
+        root = Btree.insertNode(root,2);
+        root = Btree.insertNode(root, 1);
+        root = Btree.insertNode(root, 3);
+
+        Btree.invertTreeNode(root);
+
 
 
     }
