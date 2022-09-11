@@ -3,6 +3,7 @@ package Patterns;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 public class Main {
 
@@ -69,20 +70,36 @@ public class Main {
 //
 //        int g = newP.FindMaxSubArray(new int[] {2,3,4,5,3,1}, 2);
 
-        int [] arr = newP.sort(new int[] {5,4,2,3,1});
-
-        String str = "formation";
-
-        String str1 = str.substring(1,5);
-
-        System.out.println(str1);
+//        int [] arr = newP.sort(new int[] {5,4,2,3,1});
+//
+//        String str = "formation";
+//
+//        String str1 = str.substring(1,5);
+//
+//        System.out.println(str1);
 
 //        System.out.println(Arrays.toString(arr));
 ////        System.out.println(b);
 
+        DepthFirstSearch dfs = new DepthFirstSearch();
+
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
+
+//        dfs.hasPath(root,23);
+
+        System.out.println(dfs.maxDepth(root));
 
 
+        Stack n = new Stack();
 
+        n.add("s");
+        n.add("p");
+
+        n.peek();
 
 
     }
