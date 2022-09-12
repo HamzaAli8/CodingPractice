@@ -1,9 +1,7 @@
 package Patterns;
 
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
 
@@ -91,15 +89,28 @@ public class Main {
 
 //        dfs.hasPath(root,23);
 
-        System.out.println(dfs.maxDepth(root));
+//        System.out.println(dfs.maxDepth(root));
 
 
-        Stack n = new Stack();
+        Stack<String> n = new Stack<>();
 
-        n.add("s");
-        n.add("p");
+        n.add("hello");
+        n.add("pop");
+        n.add("snap");
+        n.add("crackle");
+        n.add("ahhhh");
 
-        n.peek();
+        n.add(3,"yeaaaaaah");
+
+        System.out.println(n.peek());
+
+
+        Queue<String> m = new LinkedList<>();
+
+
+
+
+        System.out.println(n);
 
 
     }
