@@ -50,14 +50,19 @@ public class Runner {
 //        System.out.println(q);
 
 
-        MyQueue bv = new MyQueue();
-        bv.push(1);
-        bv.push(2);
-        bv.push(3);
-        bv.push(4);
+//        MyQueue bv = new MyQueue();
+//        bv.push(1);
+//        bv.push(2);
+//        bv.push(3);
+//        bv.push(4);
+//
+//        int r = bv.pop();
+//        System.out.println(r);
 
-        int r = bv.pop();
-        System.out.println(r);
+
+        RansomNote r = new RansomNote();
+
+        r.canConstruct("smilee","aaabe");
 
 
 
