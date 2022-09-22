@@ -20,7 +20,17 @@ public class Main {
 
         int t = s.findMaxSubStringSum2(new int[]{2,3,4,1,5},2);
 
-        int q = s.findMinSubArray(new int[]{2,1,5,2,3,2},5);
+        int q = s.findMinSubArray(new int[]{2,1,5,2,3,2},7);
+
+
+        int w = j.removeDuplicates(new int[] {2,3,3,3,6,9,9});
+
+        System.out.println(w);
+
+
+
+//
+//        System.out.println(q);
 
 //        s.romanToInt("MCMXCIV");
 //
@@ -92,25 +102,25 @@ public class Main {
 //        System.out.println(dfs.maxDepth(root));
 
 
-        Stack<String> n = new Stack<>();
-
-        n.add("hello");
-        n.add("pop");
-        n.add("snap");
-        n.add("crackle");
-        n.add("ahhhh");
-
-        n.add(3,"yeaaaaaah");
-
-        System.out.println(n.peek());
-
-
-        Queue<String> m = new LinkedList<>();
-
-
-
-
-        System.out.println(n);
+//        Stack<String> n = new Stack<>();
+//
+//        n.add("hello");
+//        n.add("pop");
+//        n.add("snap");
+//        n.add("crackle");
+//        n.add("ahhhh");
+//
+//        n.add(3,"yeaaaaaah");
+//
+//        System.out.println(n.peek());
+//
+//
+//        Queue<String> m = new LinkedList<>();
+//
+//
+//
+//
+//        System.out.println(n);
 
 
     }

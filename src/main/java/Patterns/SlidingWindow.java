@@ -59,7 +59,7 @@ public class SlidingWindow {
 
             while(windowSum >= s){
 
-                minLength = Math.min(minLength, windowEnd - windowStart + 1);
+                minLength = Math.min(minLength, (windowEnd - windowStart) + 1);
                 windowSum -= arr[windowStart];
                 windowStart++;
             }
