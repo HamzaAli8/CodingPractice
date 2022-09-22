@@ -25,7 +25,10 @@ public class Main {
 
         int w = j.removeDuplicates(new int[] {2,3,3,3,6,9,9});
 
-        System.out.println(w);
+
+        int [] squared = j.makeSquares(new int [] {-2,-1,0,2,3});
+
+        System.out.println(Arrays.toString(squared));
 
 
 

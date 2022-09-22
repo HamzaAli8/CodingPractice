@@ -60,9 +60,20 @@ public class Runner {
 //        System.out.println(r);
 
 
-        RansomNote r = new RansomNote();
+//        RansomNote r = new RansomNote();
+//
+//        r.canConstruct("smilee","aaabe");
+//
 
-        r.canConstruct("smilee","aaabe");
+        MajorityElement major = new MajorityElement();
+
+        ContainsDuplicate c = new ContainsDuplicate();
+
+
+
+        boolean v = c.containsDuplicate(new int [] {1,3,3,4});
+
+        System.out.println(v);
 
 
 
