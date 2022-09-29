@@ -63,17 +63,16 @@ public class Runner {
 //        RansomNote r = new RansomNote();
 //
 //        r.canConstruct("smilee","aaabe");
+////
 //
-
-        MajorityElement major = new MajorityElement();
+//        MajorityElement major = new MajorityElement();
 
         ContainsDuplicate c = new ContainsDuplicate();
 
 
-
-        boolean v = c.containsDuplicate(new int [] {1,3,3,4});
-
-        System.out.println(v);
+        boolean x = c.containsDuplicate2(new int [] {1,2,3,4});
+        
+        System.out.println(x);
 
 
 
