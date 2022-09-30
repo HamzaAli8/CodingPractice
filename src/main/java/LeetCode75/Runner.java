@@ -71,8 +71,9 @@ public class Runner {
 
 
         boolean x = c.containsDuplicate2(new int [] {1,2,3,4});
-        
-        System.out.println(x);
+        String s = "1+2";
+
+       
 
 
 
